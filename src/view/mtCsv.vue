@@ -72,7 +72,7 @@ export default {
         //reader.onload是fileReader对象读取文件结束时的回调函数 这个回调函数会有一个参数
         //该参数的target下的result中保存了fileReader对象读取文件后的结果
         reader.onload = (event) => {
-          // reader.result为获取结果 为xml字符串，借助x2js.js中的xml2js方法解析为一个对象
+          // result为获取结果 为xml字符串，借助x2js.js中的xml2js方法解析为一个对象
           this.allFileData.push({
             fileData: this.$x2js.xml2js(event.target.result),
             fileName: file.name
