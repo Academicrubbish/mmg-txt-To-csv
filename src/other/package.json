@@ -1,0 +1,26 @@
+{
+  "name": "to-csv",
+  "version": "1.0.0",
+  "description": "专供杨锦鹏先生将mmg文件或txt文件转化为csv文件用",
+  "main": "main.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev webpack-dev-server --progress --hot --host 0.0.0.0 --port 8089",
+    "test": "NODE_ENV=test webpack --config webpack.test.config.js --progress",
+    "online": "NODE_ENV=production webpack --config webpack.online.config.js --progress",
+    "build": "webpack",
+    "node": "node server.js",
+    "dist": "electron-builder"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "author": "yuanchuang",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  }
+}
